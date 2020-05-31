@@ -1,0 +1,363 @@
+// EXEMPLE
+
+
+// @mixin media-min($_min-width) {
+//     @media screen and (min-width: $_min-width) {
+//         &{ @content; }
+//     }
+// }
+// body {
+// background-color: #00ee4f;
+// margin: 0;
+// padding: 0;
+// // @include tablet {
+// //     background-color: rgb(89, 0, 255);
+// // }
+// }
+// #content {
+// width: 100%;
+// height: 50px;
+// margin: 0 auto;
+// background-color: #ff8800;
+
+// @include media-min(320px) {
+// width: 100%;
+// }
+// @include media-min(768px) {
+// width: 668px;
+// }
+// @include media-min(1024px) {
+// width: 1024px;
+// }
+// @include media-min(1440px) {
+// width: 1300px;
+// }
+// @include media-min(2000px) {
+// width: 1440px;
+// }
+// }
+
+@import '_variable.scss';
+@import '_mixin.scss';
+
+// Général
+
+body {
+    font-family: 'Mukta', sans-serif;
+    background: #f7e8e8;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header, footer, .btn__nextime {
+    background-color: $bg_color;
+}
+
+.menu-prev__menu a, .menu-prev__title--enchantee a {
+    text-decoration: none;
+}
+
+footer a, .btn__nextime a, header a {
+    text-decoration: none;
+    color: $text_color;
+}
+
+// Header
+
+
+
+header h1 {
+    text-align: center;
+    font-size: 3rem;
+    height: 100px;
+    padding-top: 25px;
+    margin-top: 0;
+}
+
+// Menu
+
+.menu {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    // @include media-max(936px) {
+    //         display: block;    
+    // }
+    // @include media-max(1440px) {
+        
+    // }
+    // @include media-max(2560px) {
+    //     flex-flow: row nowrap;
+    // }
+    @include media-min(320px, 960px) {
+        display: block;    
+    }
+    @include media-min(1440px, 2560px) {
+        flex-flow: row nowrap;
+        height: 750px;
+    }
+// @include media-min(1440px) {
+//     flex-flow: row nowrap;
+// }
+// @include media-min(2560px) {
+//     flex-flow: row nowrap;
+// }
+
+
+    .menu-prev {
+        height: 450px;
+        width: 350px;
+        box-shadow: 0px 0px 10px 0px rgba(177, 171, 170, 0.75);
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 6.3%;
+
+        @include media-min(320px, 960px) {
+            width: 100%;
+            padding: 0;
+            margin: 25px 0;
+            height: 280px;
+    }
+        @include media-min(1440px, 2560px) {
+            margin: 3.3%;
+    }
+        // 930px tablet -> desktop
+        // 1440px -> ligne
+        // @include media-max(350px) {
+        //     width: 100%;
+        // }
+        // @include media-max(936px) {
+        //         width: 100%;
+        //         margin: 25px 0;
+        //         padding: 0;
+        //         height: 300px;
+        //     }
+        // @include media-max(1440px) {
+                
+        //     }
+        // @include media-max(2560px) {
+        //     margin: 3.3%;
+        //     }
+        // @include media-min(350px) {
+        //     width: 100%;
+        // }
+        // @include media-min(936px) {
+        //         width: 100%;
+        //         margin: 25px 0;
+        //         padding: 0;
+        //         height: 300px;
+        //     }
+        // @include media-min(1440px) {
+                
+        //     }
+        // @include media-min(2560px) {
+        //     margin: 3.3%;
+        //     }
+
+        &__menu {
+            font-size: 2.6rem;
+            margin-top: 5px;
+        }
+
+        &__title {
+            margin-top: 65px;
+            font-size: 2rem;
+        }
+
+
+        //    Menu top left
+
+
+        &--enchantee, &__menu--enchantee a, &__title--enchantee a {
+            background-color: #fcdfda;
+            @include menu_enchantee;
+            }
+            
+        &__title--enchantee {
+            margin-top: 10px;
+            }
+            
+        &__menu--enchantee a {
+                font-size: 2.6rem;
+            }
+
+
+        //      Menu top right
+
+                
+        &--french, &__menu--french a {
+            background-color: #fef5fd;
+            @include menu_french;
+            }
+
+        &__title--french {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: -webkit-linear-gradient(left, #e48435 25%, #763f96 ,#4e68db);
+            }
+
+
+        //     Menu bottom left
+
+
+        &--delice, &__menu--delice a {
+            background-color: #f9f9f9;
+            @include menu_delice;
+
+            }
+
+        &__title--delice {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: -webkit-linear-gradient(left, #0e2b8a 5%, #209ae0);
+                }
+
+
+        //       Menu bottom right
+
+
+        &--palet, &__menu--palet a {
+            background-color: #fdfffd;
+            @include menu_palet;
+            }
+
+        &__title--palet {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: -webkit-linear-gradient(left, #32850b 25%, #94e60f);
+            }
+        }
+    }
+
+// BTN next_time + footer
+
+.btn__nextime {
+    width: 250px;
+    text-align: center;
+    margin: 25px auto;
+    font-size: 1.8rem;
+    padding: 0 45px; 
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+  
+    @include media-min(320px, 960px) {
+        font-size: 1.4rem;
+        padding: 0;
+}
+    // @include media-max(936px) {
+    //     * {
+    //         padding: 0;
+    //         margin: 0;
+    //     }
+    //     font-size: 1.4rem;
+    //     padding: 8px 1px;
+    //     // Problème PADDING BTN
+    // }
+    // @include media-max(1440px) {
+    
+    // }
+    // @include media-max(2560px) {
+    
+    // }
+    // @include media-min(936px) {
+    //     * {
+    //         padding: 0;
+    //         margin: 0;
+    //     }
+    //     font-size: 1.4rem;
+    //     padding: 8px 1px;
+    //     // Problème PADDING BTN
+    // }
+    // @include media-min(1440px) {
+    
+    // }
+    // @include media-min(2560px) {
+    
+    // }
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    line-height: 5rem;
+    
+    @include media-min(320px, 960px) {
+        font-size: 0.96rem;
+        height: 80px;
+}
+
+    @include media-min(1440px, 2560px) {
+}
+    // @include media-max(936px) {
+    //     font-size: 0.96rem;
+    //     height: 80px;
+    //     padding: 0;
+    // }
+    // @include media-min(936px) {
+    //     font-size: 0.96rem;
+    //     height: 80px;
+    //     padding: 0;
+    // }
+   
+    // @include media-max(1440px) {
+    
+    // }
+    // @include media-max(2560px) {
+    
+    // }
+}
+
+footer h4 {
+    margin: 20px 55px;
+    @include media-min(320px, 960px) {
+        margin: 2px 20px;
+}
+    // @include media-max(936px) {
+    //     margin: 2px 20px;
+    // }
+    // @include media-min(936px) {
+    //     margin: 2px 20px;
+    // }
+    // @include media-max(1440px) {
+    
+    // }
+    // @include media-max(2560px) {
+    
+    // }
+}
+
+
+
+
+
+
+// @include media-max(936px) {
+        
+// }
+// @include media-max(1440px) {
+
+// }
+// @include media-max(2560px) {
+
+// }
+
+
+
+
+

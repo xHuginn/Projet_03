@@ -1,0 +1,36 @@
+// @mixin media-max($_max-width) {
+//     @media screen and (max-width: $_max-width) {
+//         &{ @content; }
+//     }
+// }
+
+// Mixin Responsive
+
+@mixin media-min($_min-width, $_max-width) {
+    @media screen and (min-width: $_min-width) and (max-width: $_max-width) {
+        &{ @content; }
+    }
+}
+
+
+// Mixin Menu
+
+@mixin menu_enchantee {
+    color: #791717;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+@mixin menu_french {
+    color: #e48435;
+    font-family: 'Great Vibes', cursive;
+}
+
+@mixin menu_delice {
+    color: #0e2b8a;
+    font-family: 'Dancing Script', cursive;
+}
+
+@mixin menu_palet {
+    color: #32850b;
+    font-family: 'Satisfy', cursive;
+}

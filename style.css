@@ -1,0 +1,166 @@
+body {
+  font-family: "Mukta", sans-serif;
+  background: #f7e8e8;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer, .btn__nextime {
+  background-color: #569c87;
+}
+
+.menu-prev__menu a, .menu-prev__title--enchantee a {
+  text-decoration: none;
+}
+
+footer a, .btn__nextime a, header a {
+  text-decoration: none;
+  color: #eac450;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 3rem;
+  height: 100px;
+  padding-top: 25px;
+  margin-top: 0;
+}
+
+.menu {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+@media screen and (min-width: 320px) and (max-width: 960px) {
+  .menu {
+    display: block;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+  .menu {
+    flex-flow: row nowrap;
+    height: 750px;
+  }
+}
+.menu .menu-prev {
+  height: 450px;
+  width: 350px;
+  box-shadow: 0px 0px 10px 0px rgba(177, 171, 170, 0.75);
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 6.3%;
+}
+@media screen and (min-width: 320px) and (max-width: 960px) {
+  .menu .menu-prev {
+    width: 100%;
+    padding: 0;
+    margin: 25px 0;
+    height: 280px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+  .menu .menu-prev {
+    margin: 3.3%;
+  }
+}
+.menu .menu-prev__menu {
+  font-size: 2.6rem;
+  margin-top: 5px;
+}
+.menu .menu-prev__title {
+  margin-top: 65px;
+  font-size: 2rem;
+}
+.menu .menu-prev--enchantee, .menu .menu-prev__menu--enchantee a, .menu .menu-prev__title--enchantee a {
+  background-color: #fcdfda;
+  color: #791717;
+  font-family: "Shadows Into Light", cursive;
+}
+.menu .menu-prev__title--enchantee {
+  margin-top: 10px;
+}
+.menu .menu-prev__menu--enchantee a {
+  font-size: 2.6rem;
+}
+.menu .menu-prev--french, .menu .menu-prev__menu--french a {
+  background-color: #fef5fd;
+  color: #e48435;
+  font-family: "Great Vibes", cursive;
+}
+.menu .menu-prev__title--french {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, #e48435 25%, #763f96, #4e68db);
+}
+.menu .menu-prev--delice, .menu .menu-prev__menu--delice a {
+  background-color: #f9f9f9;
+  color: #0e2b8a;
+  font-family: "Dancing Script", cursive;
+}
+.menu .menu-prev__title--delice {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, #0e2b8a 5%, #209ae0);
+}
+.menu .menu-prev--palet, .menu .menu-prev__menu--palet a {
+  background-color: #fdfffd;
+  color: #32850b;
+  font-family: "Satisfy", cursive;
+}
+.menu .menu-prev__title--palet {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, #32850b 25%, #94e60f);
+}
+
+.btn__nextime {
+  width: 250px;
+  text-align: center;
+  margin: 25px auto;
+  font-size: 1.8rem;
+  padding: 0 45px;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+}
+@media screen and (min-width: 320px) and (max-width: 960px) {
+  .btn__nextime {
+    font-size: 1.4rem;
+    padding: 0;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  margin-bottom: 0;
+  font-size: 1.8rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  line-height: 5rem;
+}
+@media screen and (min-width: 320px) and (max-width: 960px) {
+  footer {
+    font-size: 0.96rem;
+    height: 80px;
+  }
+}
+footer h4 {
+  margin: 20px 55px;
+}
+@media screen and (min-width: 320px) and (max-width: 960px) {
+  footer h4 {
+    margin: 2px 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
