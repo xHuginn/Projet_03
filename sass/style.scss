@@ -291,7 +291,6 @@ footer {
     display: flex;
     justify-content: space-between;
     height: 120px;
-    margin-bottom: 0;
     font-size: 1.8rem;
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
@@ -356,6 +355,156 @@ footer h4 {
 // @include media-max(2560px) {
 
 // }
+
+
+
+
+
+
+
+
+
+
+
+// Menu anim
+.menu-prev--enchantee, .menu-prev--french, .menu-prev--delice, .menu-prev--palet {
+    transform: scale(1);
+    transition: transform 400ms;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+
+.menu-prev__title, .menu-prev__menu {
+    transform: scale(1);
+    transition: transform 300ms;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+
+
+// loading anim
+
+.loading {
+    height: 500px;
+    width: 500px;
+    
+}
+
+.loading span {
+    background-color: rgb(255, 0, 0);
+    height: 250px;
+    width: 250px;
+    margin: 15px;
+    border-radius: 50%;
+    
+    }
+
+span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 15px;
+    animation: dot 0.2s infinite alternate;
+    background-color: $text_color;
+}
+
+.un {
+    animation-delay: 450ms;
+}
+
+.deux {
+    animation-delay: 550ms;
+}
+
+.trois {
+    animation-delay: 650ms;
+}
+
+@keyframes dot {
+    from {transform: translateY(8px);
+}
+
+
+}
+
+
+
+
+
+
+// Footer anim
+footer h4 {
+    
+    &:hover {
+        animation: wizz 0.2s infinite alternate;
+    }
+}
+
+
+@keyframes wizz {
+    from {
+        transform: rotate(2deg);
+    }
+
+    to {
+        transform: rotate(-2deg);
+    }
+}
+
+
+.test {
+    height: 500px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+// $cd-btn-start: rgba(1, 28, 55, 0);
+// $cd-btn-end: rgba(1, 28, 55, 1);
+// $cd-btn: #00ee4f;
+
+// .btn {
+//     background-color: $cd-btn-start;
+//     border: 4px solid $cd-btn;
+//     border-radius: 10rem;
+//     cursor: pointer;
+//     font-size: 3rem;
+//     overflow: hidden;
+//     padding: 1.85rem 3rem;
+//     position: relative;
+//     transition: transform 450ms, background-color 300ms 150ms;
+//     &:hover {
+//         transform: scale(1.13);
+//         background-color: $cd-btn-end;
+//     }
+// }
+
+// .ni {
+//     color: #763f96;
+//     font-size: 2rem;
+//     animation: wizz infinite;  
+//     animation-duration: 250ms;  
+// }
+
+
+// @keyframes wizz:active {
+//     from {
+//         transform: rotate(2deg);
+//     }
+
+//     to {
+//         transform: rotate(-2deg);
+//     }
+// }
+
+
+
+
+
+
 
 
 

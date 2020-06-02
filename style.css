@@ -142,7 +142,6 @@ footer {
   display: flex;
   justify-content: space-between;
   height: 120px;
-  margin-bottom: 0;
   font-size: 1.8rem;
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
@@ -161,6 +160,80 @@ footer h4 {
   footer h4 {
     margin: 2px 20px;
   }
+}
+
+.menu-prev--enchantee, .menu-prev--french, .menu-prev--delice, .menu-prev--palet {
+  transform: scale(1);
+  transition: transform 400ms;
+}
+.menu-prev--enchantee:hover, .menu-prev--french:hover, .menu-prev--delice:hover, .menu-prev--palet:hover {
+  transform: scale(1.15);
+}
+
+.menu-prev__title, .menu-prev__menu {
+  transform: scale(1);
+  transition: transform 300ms;
+}
+.menu-prev__title:hover, .menu-prev__menu:hover {
+  transform: scale(1.15);
+}
+
+.loading {
+  height: 500px;
+  width: 500px;
+}
+
+.loading span {
+  background-color: red;
+  height: 250px;
+  width: 250px;
+  margin: 15px;
+  border-radius: 50%;
+}
+
+span {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 15px;
+  animation: dot 0.2s infinite alternate;
+  background-color: #eac450;
+}
+
+.un {
+  animation-delay: 450ms;
+}
+
+.deux {
+  animation-delay: 550ms;
+}
+
+.trois {
+  animation-delay: 650ms;
+}
+
+@keyframes dot {
+  from {
+    transform: translateY(8px);
+  }
+}
+footer h4:hover {
+  animation: wizz 0.2s infinite alternate;
+}
+
+@keyframes wizz {
+  from {
+    transform: rotate(2deg);
+  }
+  to {
+    transform: rotate(-2deg);
+  }
+}
+.test {
+  height: 500px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
