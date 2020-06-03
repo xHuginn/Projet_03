@@ -83,29 +83,15 @@ header h1 {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    // @include media-max(936px) {
-    //         display: block;    
-    // }
-    // @include media-max(1440px) {
-        
-    // }
-    // @include media-max(2560px) {
-    //     flex-flow: row nowrap;
-    // }
+
     @include media-min(320px, 960px) {
         display: block;    
     }
+
     @include media-min(1440px, 2560px) {
         flex-flow: row nowrap;
         height: 750px;
     }
-// @include media-min(1440px) {
-//     flex-flow: row nowrap;
-// }
-// @include media-min(2560px) {
-//     flex-flow: row nowrap;
-// }
-
 
     .menu-prev {
         height: 450px;
@@ -124,41 +110,10 @@ header h1 {
             margin: 25px 0;
             height: 280px;
     }
+
         @include media-min(1440px, 2560px) {
             margin: 3.3%;
     }
-        // 930px tablet -> desktop
-        // 1440px -> ligne
-        // @include media-max(350px) {
-        //     width: 100%;
-        // }
-        // @include media-max(936px) {
-        //         width: 100%;
-        //         margin: 25px 0;
-        //         padding: 0;
-        //         height: 300px;
-        //     }
-        // @include media-max(1440px) {
-                
-        //     }
-        // @include media-max(2560px) {
-        //     margin: 3.3%;
-        //     }
-        // @include media-min(350px) {
-        //     width: 100%;
-        // }
-        // @include media-min(936px) {
-        //         width: 100%;
-        //         margin: 25px 0;
-        //         padding: 0;
-        //         height: 300px;
-        //     }
-        // @include media-min(1440px) {
-                
-        //     }
-        // @include media-min(2560px) {
-        //     margin: 3.3%;
-        //     }
 
         &__menu {
             font-size: 2.6rem;
@@ -176,6 +131,7 @@ header h1 {
 
         &--enchantee, &__menu--enchantee a, &__title--enchantee a {
             background-color: #fcdfda;
+
             @include menu_enchantee;
             }
             
@@ -193,6 +149,7 @@ header h1 {
                 
         &--french, &__menu--french a {
             background-color: #fef5fd;
+
             @include menu_french;
             }
 
@@ -209,6 +166,7 @@ header h1 {
 
         &--delice, &__menu--delice a {
             background-color: #f9f9f9;
+
             @include menu_delice;
 
             }
@@ -226,6 +184,7 @@ header h1 {
 
         &--palet, &__menu--palet a {
             background-color: #fdfffd;
+            
             @include menu_palet;
             }
 
@@ -238,125 +197,7 @@ header h1 {
         }
     }
 
-// BTN next_time + footer
-
-//     @include media-min(320px, 960px) {
-//         font-size: 1.4rem;
-//         padding: 0;
-// }
-    // @include media-max(936px) {
-    //     * {
-    //         padding: 0;
-    //         margin: 0;
-    //     }
-    //     font-size: 1.4rem;
-    //     padding: 8px 1px;
-    //     // Problème PADDING BTN
-    // }
-    // @include media-max(1440px) {
-    
-    // }
-    // @include media-max(2560px) {
-    
-    // }
-    // @include media-min(936px) {
-    //     * {
-    //         padding: 0;
-    //         margin: 0;
-    //     }
-    //     font-size: 1.4rem;
-    //     padding: 8px 1px;
-    //     // Problème PADDING BTN
-    // }
-    // @include media-min(1440px) {
-    
-    // }
-    // @include media-min(2560px) {
-    
-    // }
-// }
-
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    height: 120px;
-    font-size: 1.8rem;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 300;
-    line-height: 5rem;
-    
-    @include media-min(320px, 960px) {
-        font-size: 0.96rem;
-        height: 80px;
-}
-
-    @include media-min(1440px, 2560px) {
-}
-    // @include media-max(936px) {
-    //     font-size: 0.96rem;
-    //     height: 80px;
-    //     padding: 0;
-    // }
-    // @include media-min(936px) {
-    //     font-size: 0.96rem;
-    //     height: 80px;
-    //     padding: 0;
-    // }
-   
-    // @include media-max(1440px) {
-    
-    // }
-    // @include media-max(2560px) {
-    
-    // }
-}
-
-footer h4 {
-    margin: 20px 55px;
-    @include media-min(320px, 960px) {
-        margin: 2px 20px;
-}
-    // @include media-max(936px) {
-    //     margin: 2px 20px;
-    // }
-    // @include media-min(936px) {
-    //     margin: 2px 20px;
-    // }
-    // @include media-max(1440px) {
-    
-    // }
-    // @include media-max(2560px) {
-    
-    // }
-}
-
-
-
-
-
-
-// @include media-max(936px) {
-        
-// }
-// @include media-max(1440px) {
-
-// }
-// @include media-max(2560px) {
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-// Menu anim
+    // Menu anim
 .menu-prev--enchantee, .menu-prev--french, .menu-prev--delice, .menu-prev--palet {
     transform: scale(1);
     transition: transform 400ms;
@@ -374,30 +215,39 @@ footer h4 {
     }
 }
 
-
-
-// loading anim
-
-.loading {
-    height: 500px;
-    width: 500px;
-    
+// BTN next_time
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.loading span {
-    background-color: rgb(255, 0, 0);
-    height: 250px;
-    width: 250px;
-    margin: 15px;
-    border-radius: 50%;
-    
-    }
+// Problème padding
+
+.btn__nextime {
+    margin: 25px auto;
+    border-radius: 8px;
+    font-size: 2rem;
+    padding: 10px 45px;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    width: 380px;
+
+    @include media-min(320px, 767px) {
+        width: 200px;
+        font-size: 1.2rem;
+}
+}
+
+// BTN anim
 
 span {
-    width: 50px;
-    height: 50px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    margin: 15px;
+    margin: 5px;
+    margin-top: 20px;
     animation: dot 0.2s infinite alternate;
     background-color: $text_color;
 }
@@ -417,18 +267,42 @@ span {
 @keyframes dot {
     from {transform: translateY(8px);
 }
-
-
 }
 
 
 
 
+// Footer
 
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    font-size: 1.8rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    line-height: 5rem;
+    
+    @include media-min(320px, 960px) {
+        font-size: 0.96rem;
+        height: 80px;
+}
+
+    @include media-min(1440px, 2560px) {
+}
+   
+}
+
+footer h4 {
+    margin: 20px 55px;
+    @include media-min(320px, 960px) {
+        margin: 2px 20px;
+}
+}
 
 // Footer anim
 footer h4 {
-    
     &:hover {
         animation: wizz 0.2s infinite alternate;
     }
@@ -446,57 +320,16 @@ footer h4 {
 }
 
 
-.test {
-    height: 500px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-}
-// $cd-btn-start: rgba(1, 28, 55, 0);
-// $cd-btn-end: rgba(1, 28, 55, 1);
-// $cd-btn: #00ee4f;
 
-// .btn {
-//     background-color: $cd-btn-start;
-//     border: 4px solid $cd-btn;
-//     border-radius: 10rem;
-//     cursor: pointer;
-//     font-size: 3rem;
-//     overflow: hidden;
-//     padding: 1.85rem 3rem;
-//     position: relative;
-//     transition: transform 450ms, background-color 300ms 150ms;
-//     &:hover {
-//         transform: scale(1.13);
-//         background-color: $cd-btn-end;
-//     }
+
+
+
+// @include media-max(936px) {
+        
 // }
+// @include media-max(1440px) {
 
-// .ni {
-//     color: #763f96;
-//     font-size: 2rem;
-//     animation: wizz infinite;  
-//     animation-duration: 250ms;  
 // }
+// @include media-max(2560px) {
 
-
-// @keyframes wizz:active {
-//     from {
-//         transform: rotate(2deg);
-//     }
-
-//     to {
-//         transform: rotate(-2deg);
-//     }
 // }
-
-
-
-
-
-
-
-
-
-
-
