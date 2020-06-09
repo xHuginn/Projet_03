@@ -59,6 +59,13 @@ body {
     background: #f7e8e8;
     margin: 0;
     padding: 0;
+
+    @include mobile {
+        width: fit-content;
+    }
+    @include tablet {
+        width: fit-content;
+    }
     
 }
 
@@ -75,6 +82,10 @@ footer a, .btn__nextime a, header a {
     color: $text_color;
 }
 
+h3 {
+    margin: 0;
+}
+
 // Header
 
 
@@ -89,6 +100,18 @@ header h1 {
 
 // Menu
 
+.principale {
+    margin: auto;
+    max-width: 1000px;
+    @include mobile {
+        max-width: none;
+    }
+    @include tablet {
+        max-width: none;
+    }
+    
+}
+
 .menu {
     display: flex;
     text-align: center;
@@ -96,45 +119,78 @@ header h1 {
     align-items: center;
     flex-flow: row wrap;
 
-    @include media-min(320px, 960px) {
-        display: block;    
+    @include mobile {
+        display: block; 
+        width: 100%;   
     }
 
-    @include media-min(1440px, 2560px) {
-        flex-flow: row nowrap;
-        height: 750px;
+    @include mobile {
+        display: block; 
+        width: 100%;    
     }
+
+    // @include media-min(1440px, 2560px) {
+    //     flex-flow: row nowrap;
+    //     height: 750px;
+    //     // modifier
+    // }
 
     .menu-prev {
+        min-height: 450px;
         height: 450px;
-        width: 350px;
+        min-width: 350px;
         box-shadow: 0px 0px 10px 0px rgba(177, 171, 170, 0.75);
-        font-size: 1.2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: 6.3%;
 
-        @include media-min(320px, 960px) {
-            width: 100%;
-            padding: 0;
+        @include mobile {
             margin: 25px 0;
-            height: 280px;
-    }
+            width: 100%;
+            height: 250px;
+            min-height: 250;
+        }
+        @include tablet {
+            margin: 25px 0;
+            width: 100%;
+            height: 350px;
+            min-height: 350px;
+        }
+        @include desktop_4k {
+            height: 450px;
+            width: 15%;
+            margin: 4.1%;
+        }
+       
+        
+    //     @include media-min(320px, 960px) {
+    //         width: 100%;
+    //         padding: 0;
+    //         margin: 25px 0;
+    //         height: 280px;
+    // }
 
-        @include media-min(1440px, 2560px) {
-            margin: 3.3%;
-    }
+    //     @include media-min(1440px, 2560px) {
+    //         margin: 3.3%;
+    // }
 
         &__menu {
-            font-size: 2.6rem;
+            font-size: 2rem;
             margin-top: 5px;
+
+            @include mobile {
+                font-size: 1.8rem;
+            }
         }
 
         &__title {
-            margin-top: 65px;
+            margin-top: 45px;
             font-size: 2rem;
+            @include mobile {
+                font-size: 1.8rem;
+            }
         }
 
 
@@ -143,16 +199,11 @@ header h1 {
 
         &--enchantee, &__menu--enchantee a, &__title--enchantee a {
             background-color: #fcdfda;
-
             @include menu_enchantee;
             }
             
         &__title--enchantee {
             margin-top: 10px;
-            }
-            
-        &__menu--enchantee a {
-                font-size: 2.6rem;
             }
 
 
@@ -210,14 +261,21 @@ header h1 {
     }
 
     // Menu anim
-.menu-prev--enchantee, .menu-prev--french, .menu-prev--delice, .menu-prev--palet {
+// .menu-prev--enchantee, .menu-prev--french, .menu-prev--delice, .menu-prev--palet {
+//     transform: scale(1);
+//     transition: transform 400ms;
+//     &:hover {
+//         transform: scale(1.15);
+//     }
+// }
+.anim_scale {
     transform: scale(1);
-    transition: transform 400ms;
+    transition: transform 300ms;
+    width: 250px;
     &:hover {
-        transform: scale(1.15);
+        transform: scale(1.25);
     }
 }
-
 
 .menu-prev__title, .menu-prev__menu {
     transform: scale(1);
@@ -228,10 +286,10 @@ header h1 {
 }
 
 // BTN next_time
-* {
-    margin: 0;
-    padding: 0;
-}
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
 
 // Problème padding
 
@@ -246,11 +304,13 @@ header h1 {
     justify-content: center;
     width: 380px;
 
-    @include media-min(320px, 767px) {
-        width: 200px;
-        font-size: 1.2rem;
+//     @include media-min(320px, 767px) {
+//         width: 200px;
+//         font-size: 1.2rem;
+// }
 }
-}
+
+
 
 // BTN anim
 
@@ -259,26 +319,33 @@ span {
     height: 8px;
     border-radius: 50%;
     margin: 5px;
-    margin-top: 20px;
-    animation: dot 0.2s infinite alternate;
+    margin-top: 25px;
+    animation: dot 0.8s infinite alternate;
     background-color: $text_color;
 }
 
 .un {
-    animation-delay: 450ms;
+    animation-delay: 150ms;
 }
 
 .deux {
-    animation-delay: 550ms;
+    animation-delay: 450ms;
 }
 
 .trois {
-    animation-delay: 650ms;
+    animation-delay: 750ms;
 }
 
 @keyframes dot {
-    from {transform: translateY(8px);
-}
+    from {
+        transform: translateY(3px);
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+
 }
 
 
@@ -292,25 +359,33 @@ footer {
     justify-content: space-between;
     height: 120px;
     font-size: 1.8rem;
-    font-family: 'Quicksand', sans-serif;
     font-weight: 300;
     line-height: 5rem;
+    font-weight: bold;
     
-    @include media-min(320px, 960px) {
-        font-size: 0.96rem;
-        height: 80px;
-}
+//     @include media-min(320px, 960px) {
+//         font-size: 0.96rem;
+//         height: 80px;
+// }
 
-    @include media-min(1440px, 2560px) {
-}
+//     @include media-min(1440px, 2560px) {
+// }
    
 }
 
 footer h4 {
     margin: 20px 55px;
-    @include media-min(320px, 960px) {
-        margin: 2px 20px;
-}
+    @include mobile {
+        font-size: 1.5rem;
+        margin: 10px 25px;
+    }
+    @include tablet {
+        margin: 10px 25px;
+        font-size: 1.5rem;
+    }
+//     @include media-min(320px, 960px) {
+//         margin: 2px 20px;
+// }
 }
 
 // Footer anim
@@ -323,11 +398,11 @@ footer h4 {
 
 @keyframes wizz {
     from {
-        transform: rotate(2deg);
+        transform: rotate(8deg);
     }
 
     to {
-        transform: rotate(-2deg);
+        transform: rotate(-8deg);
     }
 }
 

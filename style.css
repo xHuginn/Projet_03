@@ -4,6 +4,16 @@ body {
   margin: 0;
   padding: 0;
 }
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  body {
+    width: fit-content;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  body {
+    width: fit-content;
+  }
+}
 
 header, footer, .btn__nextime {
   background-color: #569c87;
@@ -18,12 +28,31 @@ footer a, .btn__nextime a, header a {
   color: #eac450;
 }
 
+h3 {
+  margin: 0;
+}
+
 header h1 {
   text-align: center;
   font-size: 3rem;
   height: 100px;
   padding-top: 25px;
   margin-top: 0;
+}
+
+.principale {
+  margin: auto;
+  max-width: 1000px;
+}
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .principale {
+    max-width: none;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  .principale {
+    max-width: none;
+  }
 }
 
 .menu {
@@ -33,48 +62,69 @@ header h1 {
   align-items: center;
   flex-flow: row wrap;
 }
-@media screen and (min-width: 320px) and (max-width: 960px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
   .menu {
     display: block;
+    width: 100%;
   }
 }
-@media screen and (min-width: 1440px) and (max-width: 2560px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
   .menu {
-    flex-flow: row nowrap;
-    height: 750px;
+    display: block;
+    width: 100%;
   }
 }
 .menu .menu-prev {
+  min-height: 450px;
   height: 450px;
-  width: 350px;
+  min-width: 350px;
   box-shadow: 0px 0px 10px 0px rgba(177, 171, 170, 0.75);
-  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 6.3%;
 }
-@media screen and (min-width: 320px) and (max-width: 960px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
   .menu .menu-prev {
-    width: 100%;
-    padding: 0;
     margin: 25px 0;
-    height: 280px;
+    width: 100%;
+    height: 250px;
+    min-height: 250;
   }
 }
-@media screen and (min-width: 1440px) and (max-width: 2560px) {
+@media screen and (min-width: 426px) and (max-width: 1023px) {
   .menu .menu-prev {
-    margin: 3.3%;
+    margin: 25px 0;
+    width: 100%;
+    height: 350px;
+    min-height: 350px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu .menu-prev {
+    height: 450px;
+    width: 15%;
+    margin: 4.1%;
   }
 }
 .menu .menu-prev__menu {
-  font-size: 2.6rem;
+  font-size: 2rem;
   margin-top: 5px;
 }
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .menu .menu-prev__menu {
+    font-size: 1.8rem;
+  }
+}
 .menu .menu-prev__title {
-  margin-top: 65px;
+  margin-top: 45px;
   font-size: 2rem;
+}
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .menu .menu-prev__title {
+    font-size: 1.8rem;
+  }
 }
 .menu .menu-prev--enchantee, .menu .menu-prev__menu--enchantee a, .menu .menu-prev__title--enchantee a {
   background-color: #fcdfda;
@@ -83,9 +133,6 @@ header h1 {
 }
 .menu .menu-prev__title--enchantee {
   margin-top: 10px;
-}
-.menu .menu-prev__menu--enchantee a {
-  font-size: 2.6rem;
 }
 .menu .menu-prev--french, .menu .menu-prev__menu--french a {
   background-color: #fef5fd;
@@ -121,12 +168,13 @@ header h1 {
   background-image: -webkit-linear-gradient(left, #32850b 25%, #94e60f);
 }
 
-.menu-prev--enchantee, .menu-prev--french, .menu-prev--delice, .menu-prev--palet {
+.anim_scale {
   transform: scale(1);
-  transition: transform 400ms;
+  transition: transform 300ms;
+  width: 250px;
 }
-.menu-prev--enchantee:hover, .menu-prev--french:hover, .menu-prev--delice:hover, .menu-prev--palet:hover {
-  transform: scale(1.15);
+.anim_scale:hover {
+  transform: scale(1.25);
 }
 
 .menu-prev__title, .menu-prev__menu {
@@ -135,11 +183,6 @@ header h1 {
 }
 .menu-prev__title:hover, .menu-prev__menu:hover {
   transform: scale(1.15);
-}
-
-* {
-  margin: 0;
-  padding: 0;
 }
 
 .btn__nextime {
@@ -153,38 +196,36 @@ header h1 {
   justify-content: center;
   width: 380px;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .btn__nextime {
-    width: 200px;
-    font-size: 1.2rem;
-  }
-}
 
 span {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   margin: 5px;
-  margin-top: 20px;
-  animation: dot 0.2s infinite alternate;
+  margin-top: 25px;
+  animation: dot 0.8s infinite alternate;
   background-color: #eac450;
 }
 
 .un {
-  animation-delay: 450ms;
+  animation-delay: 150ms;
 }
 
 .deux {
-  animation-delay: 550ms;
+  animation-delay: 450ms;
 }
 
 .trois {
-  animation-delay: 650ms;
+  animation-delay: 750ms;
 }
 
 @keyframes dot {
   from {
-    transform: translateY(8px);
+    transform: translateY(3px);
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
   }
 }
 footer {
@@ -192,22 +233,24 @@ footer {
   justify-content: space-between;
   height: 120px;
   font-size: 1.8rem;
-  font-family: "Quicksand", sans-serif;
   font-weight: 300;
   line-height: 5rem;
+  font-weight: bold;
 }
-@media screen and (min-width: 320px) and (max-width: 960px) {
-  footer {
-    font-size: 0.96rem;
-    height: 80px;
-  }
-}
+
 footer h4 {
   margin: 20px 55px;
 }
-@media screen and (min-width: 320px) and (max-width: 960px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
   footer h4 {
-    margin: 2px 20px;
+    font-size: 1.5rem;
+    margin: 10px 25px;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  footer h4 {
+    margin: 10px 25px;
+    font-size: 1.5rem;
   }
 }
 
@@ -217,10 +260,10 @@ footer h4:hover {
 
 @keyframes wizz {
   from {
-    transform: rotate(2deg);
+    transform: rotate(8deg);
   }
   to {
-    transform: rotate(-2deg);
+    transform: rotate(-8deg);
   }
 }
 
