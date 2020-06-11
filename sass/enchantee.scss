@@ -4,6 +4,18 @@
 
 // Général
 
+// lien sur tout le menu ?
+// Responsive / tel
+// width fit content
+// Titre en haut du menu ? 
+// Manque quoi
+
+
+
+
+
+
+
 body {
     font-family: 'Mukta', sans-serif;
     background: #f7e8e8;
@@ -11,14 +23,15 @@ body {
     padding: 0;
     width: auto;
     max-width: 100%;
-    min-width: 1300px; 
-    // Pas convaincu par les width / bug inspecteur ?
+    min-width: 1023px; 
 
     @include mobile {
         width: fit-content;
     }
     @include tablet {
-        width: fit-content;
+        // width: fit-content;
+        background-color: #791717;
+        min-width: 426px;
     }
     
 }
@@ -36,64 +49,15 @@ footer a, .btn__nextime a, header a {
     color: $text_color;
 }
 
-h3 {
+h3, h5, p {
     margin: 0;
 }
 
+h5, p {
+    margin-bottom: 20px;
+}
+
 // Header
-
-// IMG
-.title__prev {
-    display: flex;
-    margin-bottom: 15px;
-    font-weight: bold;
-    @include mobile {
-        flex-direction: column;
-        margin: 0;
-        text-align: center;
-    }
-}
-
-.title__prev img {
-    height: 10px;
-    margin: 40px;
-    margin-right: 50px;
-    @include mobile {
-        margin: 10px;
-    }
-}
-
-.title__prev h3 {
-    font-size: 2.2rem;
-    margin: auto;
-    margin-top: 13px;
-    position: relative;
-    @include mobile {
-        margin: 0;
-    }
-
-    // Anim h3
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 3px;
-        background-color: #791717;
-        left: 50%;
-        transform: translateX(-50%) scaleX(0);
-        transform-origin: 0% 100%;
-        transition: transform 250ms;
-    }
-
-    &:hover {
-        &::after {
-            transform: translateX(-50%) scaleX(1);
-        }
-    }
-}
-
-// IMG
 
 header h1 {
     text-align: center;
@@ -103,6 +67,7 @@ header h1 {
     margin-top: 0;
 }
 
+// Titre restau + Img
 .menu__restau {
     display: flex;
     flex-direction: column;
@@ -112,16 +77,83 @@ header h1 {
     @include mobile {
         font-size: 1.5rem;
     }
-}
 
-.menu__restau img {
-    width: 70px;
-    height: 70px;
-    @include mobile {
-        width: 40px;
-        height: 40px;
+    & img {
+        width: 70px;
+        height: 70px;
+        @include mobile {
+            width: 40px;
+            height: 40px;
+        }
     }
 }
+
+
+
+// titre menu + anim h3
+
+.title__prev {
+    display: flex;
+    margin-bottom: 15px;
+    font-weight: bold;
+    @include mobile {
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+    }
+    @include tablet {
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+    }
+
+    & img {
+        height: 10px;
+        margin: 40px;
+        margin-right: 50px;
+        @include mobile {
+            margin: 10px;
+        }
+        @include tablet {
+            margin: 10px;
+        }
+    }
+    
+    & h3 {
+        font-size: 2.2rem;
+        margin: auto;
+        margin-top: 13px;
+        position: relative;
+        @include mobile {
+            margin: 0;
+        }
+    
+        // Anim h3
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #791717;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: 0% 100%;
+            transition: transform 250ms;
+        }
+    
+        &:hover {
+            &::after {
+                transform: translateX(-50%) scaleX(1);
+            }
+        }
+    }
+}
+
+
+
+
+// Section Menu
 
 .menu {
     background-color: #fcdfda;
@@ -129,7 +161,7 @@ header h1 {
     max-width: 1000px;
     margin: auto;
     @include menu_enchantee;
-    padding: 80px;
+    // padding: 80px;
 
     @include mobile {
         padding: 40px;
@@ -139,12 +171,6 @@ header h1 {
     }
 }
 
-// .menu__entree, .menu__principal {
-//     background-color: rgb(255, 0, 0);
-//     width: 80%;
-//     max-width: 800px;
-// }
-
 .menu__content {
     display: flex;
     flex-wrap: wrap;
@@ -153,8 +179,14 @@ header h1 {
     width: 100%;
     max-width: 950px;
     font-size: 1.8rem;
-    // background-color: rgb(0, 255, 149);
+    background-color: #05c5ff;
     @include mobile {
+        display: block;
+        margin: 0;
+        text-align: center;
+
+    }
+    @include tablet {
         display: block;
         margin: 0;
         text-align: center;
@@ -162,15 +194,16 @@ header h1 {
     }
 }
 
-h5, p {
-    margin: 0;
-    margin-bottom: 20px;
+.menu__content__entree {
+    padding-left: 13px;
+    width: 94%;
 }
 
 .menu__content__deux h5 {
     padding-left: 13px;
     // Faire autrement sans wrap ? Tableau ? liste ?
 }
+
 .menu__entree {
     padding-left: 13px;
 }
@@ -181,21 +214,11 @@ h5, p {
         width: 100%;
 
     }
-}
+    @include tablet {
+        width: 100%;
 
-.menu__content__entree {
-    padding-left: 13px;
-    width: 94%;
+    }
 }
-
-// .menu__content {
-//     padding-left: 30px;
-//     font-size: 1.8rem;
-    
-//     .price {
-//         padding-left: 150px;
-//     }
-// }
 
 .nom__restau--bottom {
     display: flex;
@@ -213,6 +236,108 @@ h5, p {
     font-size: 2.8rem;
 }
 
+
+// BTN 
+
+.btn__nextime {
+    margin: 25px auto;
+    border-radius: 8px;
+    font-size: 2rem;
+    padding: 10px 45px;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    width: 380px;
+
+    @include mobile {
+        width: 200px;
+        font-size: 1.2rem;
+}
+}
+
+// BTN anim
+
+span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 5px;
+    margin-top: 25px;
+    animation: dot 0.8s infinite alternate;
+    background-color: $text_color;
+}
+
+.un {
+    animation-delay: 150ms;
+}
+
+.deux {
+    animation-delay: 450ms;
+}
+
+.trois {
+    animation-delay: 750ms;
+}
+
+@keyframes dot {
+    from {
+        transform: translateY(3px);
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+// Footer
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 5rem;
+    font-weight: bold;   
+}
+
+footer h4 {
+    margin: 20px 55px;
+    @include mobile {
+        font-size: 1.5rem;
+        margin: 10px 25px;
+    }
+    @include tablet {
+        margin: 10px 25px;
+        font-size: 1.5rem;
+    }
+}
+
+// Footer anim
+footer h4 {
+    &:hover {
+        animation: wizz 0.2s infinite alternate;
+    }
+}
+
+
+@keyframes wizz {
+    from {
+        transform: rotate(8deg);
+    }
+
+    to {
+        transform: rotate(-8deg);
+    }
+}
+
+
+
+// Tableau
 
 // menu__entree">
 //       div class="menu__entree--content">
@@ -289,131 +414,3 @@ h5, p {
 
 //         <div class="menu__dessert--content">
 //             <table>
-
-
-
-
-
-// BTN next_time
-// * {
-//     margin: 0;
-//     padding: 0;
-// }
-
-// Problème padding
-
-.btn__nextime {
-    margin: 25px auto;
-    border-radius: 8px;
-    font-size: 2rem;
-    padding: 10px 45px;
-    height: 50px;
-    line-height: 50px;
-    display: flex;
-    justify-content: center;
-    width: 380px;
-
-    @include mobile {
-        width: 200px;
-        font-size: 1.2rem;
-}
-}
-
-
-
-// BTN anim
-
-span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin: 5px;
-    margin-top: 25px;
-    animation: dot 0.8s infinite alternate;
-    background-color: $text_color;
-}
-
-.un {
-    animation-delay: 150ms;
-}
-
-.deux {
-    animation-delay: 450ms;
-}
-
-.trois {
-    animation-delay: 750ms;
-}
-
-@keyframes dot {
-    from {
-        transform: translateY(3px);
-        opacity: 0.2;
-    }
-
-    to {
-        opacity: 1;
-    }
-
-}
-
-
-
-
-// Footer
-
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    height: 120px;
-    font-size: 1.8rem;
-    font-weight: 300;
-    line-height: 5rem;
-    font-weight: bold;
-    
-//     @include media-min(320px, 960px) {
-//         font-size: 0.96rem;
-//         height: 80px;
-// }
-
-//     @include media-min(1440px, 2560px) {
-// }
-   
-}
-
-footer h4 {
-    margin: 20px 55px;
-    @include mobile {
-        font-size: 1.5rem;
-        margin: 10px 25px;
-    }
-    @include tablet {
-        margin: 10px 25px;
-        font-size: 1.5rem;
-    }
-//     @include media-min(320px, 960px) {
-//         margin: 2px 20px;
-// }
-}
-
-// Footer anim
-footer h4 {
-    &:hover {
-        animation: wizz 0.2s infinite alternate;
-    }
-}
-
-
-@keyframes wizz {
-    from {
-        transform: rotate(8deg);
-    }
-
-    to {
-        transform: rotate(-8deg);
-    }
-}
-
-
-

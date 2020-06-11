@@ -5,7 +5,7 @@ body {
   padding: 0;
   width: auto;
   max-width: 100%;
-  min-width: 1300px;
+  min-width: 1023px;
 }
 @media screen and (min-width: 320px) and (max-width: 425px) {
   body {
@@ -14,7 +14,8 @@ body {
 }
 @media screen and (min-width: 426px) and (max-width: 1023px) {
   body {
-    width: fit-content;
+    background-color: #791717;
+    min-width: 426px;
   }
 }
 
@@ -31,8 +32,43 @@ footer a, .btn__nextime a, header a {
   color: #eac450;
 }
 
-h3 {
+h3, h5, p {
   margin: 0;
+}
+
+h5, p {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 3rem;
+  height: 100px;
+  padding-top: 25px;
+  margin-top: 0;
+}
+
+.menu__restau {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+}
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .menu__restau {
+    font-size: 1.5rem;
+  }
+}
+.menu__restau img {
+  width: 70px;
+  height: 70px;
+}
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .menu__restau img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .title__prev {
@@ -47,7 +83,13 @@ h3 {
     text-align: center;
   }
 }
-
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  .title__prev {
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+}
 .title__prev img {
   height: 10px;
   margin: 40px;
@@ -58,7 +100,11 @@ h3 {
     margin: 10px;
   }
 }
-
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  .title__prev img {
+    margin: 10px;
+  }
+}
 .title__prev h3 {
   font-size: 2.2rem;
   margin: auto;
@@ -86,38 +132,6 @@ h3 {
   transform: translateX(-50%) scaleX(1);
 }
 
-header h1 {
-  text-align: center;
-  font-size: 3rem;
-  height: 100px;
-  padding-top: 25px;
-  margin-top: 0;
-}
-
-.menu__restau {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.2rem;
-}
-@media screen and (min-width: 320px) and (max-width: 425px) {
-  .menu__restau {
-    font-size: 1.5rem;
-  }
-}
-
-.menu__restau img {
-  width: 70px;
-  height: 70px;
-}
-@media screen and (min-width: 320px) and (max-width: 425px) {
-  .menu__restau img {
-    width: 40px;
-    height: 40px;
-  }
-}
-
 .menu {
   background-color: #fcdfda;
   width: 90%;
@@ -125,7 +139,6 @@ header h1 {
   margin: auto;
   color: #791717;
   font-family: "Shadows Into Light", cursive;
-  padding: 80px;
 }
 @media screen and (min-width: 320px) and (max-width: 425px) {
   .menu {
@@ -146,6 +159,7 @@ header h1 {
   width: 100%;
   max-width: 950px;
   font-size: 1.8rem;
+  background-color: #05c5ff;
 }
 @media screen and (min-width: 320px) and (max-width: 425px) {
   .menu__content {
@@ -154,10 +168,17 @@ header h1 {
     text-align: center;
   }
 }
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  .menu__content {
+    display: block;
+    margin: 0;
+    text-align: center;
+  }
+}
 
-h5, p {
-  margin: 0;
-  margin-bottom: 20px;
+.menu__content__entree {
+  padding-left: 13px;
+  width: 94%;
 }
 
 .menu__content__deux h5 {
@@ -176,10 +197,10 @@ h5, p {
     width: 100%;
   }
 }
-
-.menu__content__entree {
-  padding-left: 13px;
-  width: 94%;
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  .menu__content--dessert {
+    width: 100%;
+  }
 }
 
 .nom__restau--bottom {
