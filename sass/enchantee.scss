@@ -26,10 +26,8 @@ body {
     min-width: 1023px; 
 
     @include mobile {
-        width: fit-content;
     }
     @include tablet {
-        // width: fit-content;
         background-color: #791717;
         min-width: 426px;
     }
