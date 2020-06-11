@@ -5,8 +5,6 @@
 // Général
 
 // lien sur tout le menu ?
-// Responsive / tel
-// width fit content
 // Titre en haut du menu ? 
 // Manque quoi
 
@@ -334,81 +332,12 @@ footer h4 {
 }
 
 
+.menu__content__entree {
+    width: 900px;
+}
 
-// Tableau
-
-// menu__entree">
-//       div class="menu__entree--content">
-//             <table>
-//                 <tr>
-//                     <td colspan="2">
-//                         Ravioles de foie gras accompagnés de leur crème à la truffe
-//                     </td>
-//                     <td>98€</td>
-//                 </tr>
-//                 <tr>
-//                     <td colspan="2">
-//                         Caviar osciètre sur blini à la farine de blé noir
-//                     </td>
-//                     <td>115€</td>
-//                 </tr>
-//                 <tr>
-//                     <td colspan="2">
-//                         Homard et espuma de potiron mariné aux zests d'orange
-//                     </td>
-//                     <td>89€</td>
-//                 </tr>
-//                 <tr>
-//                     <td colspan="2">
-//                         Foie gras de canard cuit entiuer, confiture de figue et pain toasté
-//                     </td>
-//                     <td>105€</td>
-//                 </tr>
-//             </table>
-//         </div>
-//     </section>
-
-
-//     <section class="menu__principal">
-
-//         <div class="title__prev">
-//             <img src="./img/enchantee_separator_left.png" alt="separator_left" class="title__pres--img">
-//                 <h3 class="title__prev--title">Point d'orgue</h3>
-//             <img src="./img/enchantee_separator_right.png" alt="separator_right" class="title__pres--img">
-//         </div>
-
-//         <div class="menu__principal--content">
-//             <table>
-//                 <tr>
-//                     <td colspan="2">
-//                         Noix de coquilles Saint-Jaques sur lit de purée céleri-rave
-//                     </td>
-//                     <td>102€</td>
-//                 </tr>
-//                 <tr>
-//                     <td colspan="2">
-//                         Langouste poêlée, purée de patate douce
-//                     </td>
-//                     <td>205€</td>
-//                 </tr>
-//                 <tr>
-//                     <td colspan="2">
-//                         Mijoté de queue de boeuf et riz sauvage aux zests de citron
-//                     </td>
-//                     <td>169€</td>
-//                 </tr>
-//             </table>
-//         </div>
-//     </section>
-
-
-//     <section class="menu__dessert">
-
-//         <div class="title__prev">
-//             <img src="./img/enchantee_separator_left.png" alt="separator_left" class="title__pres--img">
-//                 <h3 class="title__prev--title">Mouvement final</h3>
-//             <img src="./img/enchantee_separator_right.png" alt="separator_right" class="title__pres--img">
-//         </div>
-
-//         <div class="menu__dessert--content">
-//             <table>
+.de {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
