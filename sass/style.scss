@@ -321,28 +321,14 @@ footer h4 {
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////
 
 
-
-// Menu Enchantee
-
-// Général
+// Menu Général 
 
 ul {
     list-style: none;
 }
-
-// h3, h5, p {
-//     margin: 0;
-// }
-
-// h5, p {
-//     margin-bottom: 20px;
-// }
-
-
-
-
 
 
 .plat {
@@ -350,18 +336,34 @@ ul {
     justify-content: space-between;
     width: 90%;
     @include mobile {
-        margin: 5px;
+        // margin: auto;
+        flex-direction: column;
+        padding: 5px;
     }
 }
 
 .plat--dessert li {
-    margin: 15px;
+    margin: 30px 0;
 }
 
-.menu__enchantee {
-    width: 70%;
+.menu__structure {
+    // width: 70%;
+    width: 90%;
+    max-width: 1000px;
     margin: auto;
-    background-color: rgb(0, 238, 255);
+
+    @include mobile {
+        width: 100%;
+    }
+    @include tablet {
+        padding: 20px;
+    }
+    @include desktop {
+        width: 70%;
+    }
+    @include desktop_4k{
+        width: 60%;
+    }
 }
 
 
@@ -377,7 +379,6 @@ ul {
     justify-content: center;
     align-items: center;
     font-size: 2.2rem;
-    @include menu_enchantee;
 
     @include mobile {
         font-size: 1.5rem;
@@ -399,15 +400,12 @@ ul {
         }
 }
 
-
-
 // titre menu + anim h3
 
 .title__prev {
     display: flex;
     margin-bottom: 15px;
     font-weight: bold;
-    @include menu_enchantee;
     @include mobile {
         flex-direction: column;
         margin: 0;
@@ -436,7 +434,9 @@ ul {
         }
     }
     
-    & h3 {
+    // Anim h3
+
+    &--enchantee, &--french-entree, &--french-principal, &--french-dessert, &--delice, &--palet {
         font-size: 2.1rem;
         margin: auto;
         margin-top: 13px;
@@ -445,15 +445,12 @@ ul {
             margin: 0;
         }
     
-        // Anim h3
-
         &::after {
             content: '';
             position: absolute;
             bottom: 0;
             width: 100%;
             height: 3px;
-            background-color: #791717;
             left: 50%;
             transform: translateX(-50%) scaleX(0);
             transform-origin: 0% 100%;
@@ -468,32 +465,33 @@ ul {
     }
 }
 
+// anim couleur h3 enchantee
+.title__prev--enchantee::after {
+        background-color: #791717;
+    }
+   
+// anim couleur h3 french entrée, plat, dessert
+.title__prev--french-entree::after {
+    background-color: #c67412;
+}
+.title__prev--french-principal::after {
+    background-color: #a56799;
+}
+.title__prev--french-dessert::after {
+    background-color: #6e4ccc;
+}
 
+// anim couleur h3 delice
+.title__prev--delice::after {
+    background-color: #0e2b8a;
+}
 
+// anim couleur h3 palet
+.title__prev--palet::after {
+    background-color: #32850b;
+}
 
 // Section Menu
-
-.menu__enchantee {
-    background-color: #fcdfda;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    @include menu_enchantee;
-
-    @include mobile {
-        width: 100%;
-    }
-    @include tablet {
-        padding: 20px;
-    }
-    @include desktop {
-        width: 70%;
-    }
-    @include desktop_4k{
-        width: 60%;
-    }
-
-}
 
 .menu__content {
     display: flex;
@@ -506,6 +504,7 @@ ul {
     // background-color: #05c5ff;
     @include mobile {
         display: block;
+        // flex-direction: column;
         margin: 0;
         text-align: center;
         margin-bottom: 15px;
@@ -523,14 +522,14 @@ ul {
     margin: 15px;
 }
 
-.menu__content__entree, .menu__content__principal {
+.menu__content__entree, .menu__content--principal {
     padding-left: 13px;
     width: 94%;
 }
 
 
 .menu__content--dessert {
-    width: 68%;
+    width: 72%;
     padding: 13px;
     @include mobile {
         width: 85%;
@@ -568,3 +567,181 @@ ul {
     margin: 0;
     padding: 3px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Menu Enchantee
+
+.menu__enchantee {
+    background-color: #fcdfda;
+    @include menu_enchantee;
+}
+
+
+// French Menu
+
+// Couleur french
+// Fond 
+// Entrée #c67412
+// Principal #a56799
+// dessert #6e4ccc
+
+
+.menu__french {
+    background-color: #fff5fe;
+    @include menu_french;
+
+}
+
+.menu__principal--french {
+    color: #a56799;
+}
+
+.menu__dessert--french {
+    color: #6e4ccc;
+}
+
+.menu__restau--french {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, #e48435 25%, #763f96 ,#4e68db);
+    padding-top: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Couleur délice
+// Text #202020
+
+
+//Couleur Palet
+// Titre 
+// #3d923a
+// #84ce61
+// #beff7f
+// Text #343534
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

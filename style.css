@@ -295,18 +295,39 @@ ul {
 }
 @media screen and (max-width: 425px) {
   .plat {
-    margin: 5px;
+    flex-direction: column;
+    padding: 5px;
   }
 }
 
 .plat--dessert li {
-  margin: 15px;
+  margin: 30px 0;
 }
 
-.menu__enchantee {
-  width: 70%;
+.menu__structure {
+  width: 90%;
+  max-width: 1000px;
   margin: auto;
-  background-color: #00eeff;
+}
+@media screen and (max-width: 425px) {
+  .menu__structure {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  .menu__structure {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .menu__structure {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu__structure {
+    width: 60%;
+  }
 }
 
 .menu__restau {
@@ -315,8 +336,6 @@ ul {
   justify-content: center;
   align-items: center;
   font-size: 2.2rem;
-  color: #791717;
-  font-family: "Shadows Into Light", cursive;
 }
 @media screen and (max-width: 425px) {
   .menu__restau {
@@ -343,8 +362,6 @@ ul {
   display: flex;
   margin-bottom: 15px;
   font-weight: bold;
-  color: #791717;
-  font-family: "Shadows Into Light", cursive;
 }
 @media screen and (max-width: 425px) {
   .title__prev {
@@ -380,60 +397,54 @@ ul {
     width: 80%;
   }
 }
-.title__prev h3 {
+.title__prev--enchantee, .title__prev--french-entree, .title__prev--french-principal, .title__prev--french-dessert, .title__prev--delice, .title__prev--palet {
   font-size: 2.1rem;
   margin: auto;
   margin-top: 13px;
   position: relative;
 }
 @media screen and (max-width: 425px) {
-  .title__prev h3 {
+  .title__prev--enchantee, .title__prev--french-entree, .title__prev--french-principal, .title__prev--french-dessert, .title__prev--delice, .title__prev--palet {
     margin: 0;
   }
 }
-.title__prev h3::after {
+.title__prev--enchantee::after, .title__prev--french-entree::after, .title__prev--french-principal::after, .title__prev--french-dessert::after, .title__prev--delice::after, .title__prev--palet::after {
   content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 3px;
-  background-color: #791717;
   left: 50%;
   transform: translateX(-50%) scaleX(0);
   transform-origin: 0% 100%;
   transition: transform 250ms;
 }
-.title__prev h3:hover::after {
+.title__prev--enchantee:hover::after, .title__prev--french-entree:hover::after, .title__prev--french-principal:hover::after, .title__prev--french-dessert:hover::after, .title__prev--delice:hover::after, .title__prev--palet:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
-.menu__enchantee {
-  background-color: #fcdfda;
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-  color: #791717;
-  font-family: "Shadows Into Light", cursive;
+.title__prev--enchantee::after {
+  background-color: #791717;
 }
-@media screen and (max-width: 425px) {
-  .menu__enchantee {
-    width: 100%;
-  }
+
+.title__prev--french-entree::after {
+  background-color: #c67412;
 }
-@media screen and (min-width: 426px) and (max-width: 1023px) {
-  .menu__enchantee {
-    padding: 20px;
-  }
+
+.title__prev--french-principal::after {
+  background-color: #a56799;
 }
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-  .menu__enchantee {
-    width: 70%;
-  }
+
+.title__prev--french-dessert::after {
+  background-color: #6e4ccc;
 }
-@media screen and (min-width: 1440px) {
-  .menu__enchantee {
-    width: 60%;
-  }
+
+.title__prev--delice::after {
+  background-color: #0e2b8a;
+}
+
+.title__prev--palet::after {
+  background-color: #32850b;
 }
 
 .menu__content {
@@ -466,13 +477,13 @@ ul {
   margin: 15px;
 }
 
-.menu__content__entree, .menu__content__principal {
+.menu__content__entree, .menu__content--principal {
   padding-left: 13px;
   width: 94%;
 }
 
 .menu__content--dessert {
-  width: 68%;
+  width: 72%;
   padding: 13px;
 }
 @media screen and (max-width: 425px) {
@@ -517,6 +528,34 @@ ul {
   font-size: 2.8rem;
   margin: 0;
   padding: 3px;
+}
+
+.menu__enchantee {
+  background-color: #fcdfda;
+  color: #791717;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.menu__french {
+  background-color: #fff5fe;
+  color: #e48435;
+  font-family: "Great Vibes", cursive;
+}
+
+.menu__principal--french {
+  color: #a56799;
+}
+
+.menu__dessert--french {
+  color: #6e4ccc;
+}
+
+.menu__restau--french {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, #e48435 25%, #763f96, #4e68db);
+  padding-top: 35px;
 }
 
 /*# sourceMappingURL=style.css.map */
