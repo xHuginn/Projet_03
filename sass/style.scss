@@ -419,7 +419,7 @@ ul {
 
     & img {
         height: 10px;
-        width: 30%; // A revoir
+        width: 27%; // A revoir
         margin: 40px;
         margin-right: 50px;
         @include mobile {
@@ -453,7 +453,7 @@ ul {
             height: 3px;
             left: 50%;
             transform: translateX(-50%) scaleX(0);
-            transform-origin: 0% 100%;
+            transform-origin: 50% 50%;
             transition: transform 250ms;
         }
     
@@ -498,9 +498,9 @@ ul {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 3px 0 70px;
-    width: 70%;
+    // width: 70%;
     max-width: 950px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     // background-color: #05c5ff;
     @include mobile {
         display: block;
@@ -661,7 +661,6 @@ ul {
 .menu__french {
     background-color: #fff5fe;
     @include menu_french;
-
 }
 
 .menu__principal--french {
@@ -682,11 +681,56 @@ ul {
 
 
 
+// Menu Delice
+
+.menu__delice {
+    background-color: #edefef;
+    @include menu_delice;
+    color: $text_color-delice;
+}
+
+.title__prev--delice {
+    // color: $text_color-delice;
+    padding-top: 8px;
+}
 
 
+.menu__restau--delice {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: -webkit-linear-gradient(left, #0e2b8a 5%, #209ae0);
+        padding-top: 35px;
+}
+
+// Menu Palet
+
+.menu__palet {
+    background-color: #fdfffd;
+    @include menu_palet;
+    color: #343534;
+}
+
+.title__prev--palet {
+    // color: $text_color-delice;
+    padding-top: 8px;
+}
 
 
+.menu__restau--palet {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: -webkit-linear-gradient(left, #32850b 25%, #94e60f);
+        padding-top: 35px;
+}
 
+//Couleur Palet
+// Titre 
+// #3d923a
+// #84ce61
+// #beff7f
+// Text 
 
 
 
@@ -717,15 +761,10 @@ ul {
 
 
 // Couleur délice
-// Text #202020
+// Text #
 
 
-//Couleur Palet
-// Titre 
-// #3d923a
-// #84ce61
-// #beff7f
-// Text #343534
+
 
 
 

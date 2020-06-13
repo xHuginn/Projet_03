@@ -379,7 +379,7 @@ ul {
 }
 .title__prev img {
   height: 10px;
-  width: 30%;
+  width: 27%;
   margin: 40px;
   margin-right: 50px;
 }
@@ -416,7 +416,7 @@ ul {
   height: 3px;
   left: 50%;
   transform: translateX(-50%) scaleX(0);
-  transform-origin: 0% 100%;
+  transform-origin: 50% 50%;
   transition: transform 250ms;
 }
 .title__prev--enchantee:hover::after, .title__prev--french-entree:hover::after, .title__prev--french-principal:hover::after, .title__prev--french-dessert:hover::after, .title__prev--delice:hover::after, .title__prev--palet:hover::after {
@@ -452,9 +452,8 @@ ul {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 3px 0 70px;
-  width: 70%;
   max-width: 950px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 @media screen and (max-width: 425px) {
   .menu__content {
@@ -555,6 +554,44 @@ ul {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: -webkit-linear-gradient(left, #e48435 25%, #763f96, #4e68db);
+  padding-top: 35px;
+}
+
+.menu__delice {
+  background-color: #edefef;
+  color: #0e2b8a;
+  font-family: "Dancing Script", cursive;
+  color: #202020;
+}
+
+.title__prev--delice {
+  padding-top: 8px;
+}
+
+.menu__restau--delice {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, #0e2b8a 5%, #209ae0);
+  padding-top: 35px;
+}
+
+.menu__palet {
+  background-color: #fdfffd;
+  color: #32850b;
+  font-family: "Satisfy", cursive;
+  color: #343534;
+}
+
+.title__prev--palet {
+  padding-top: 8px;
+}
+
+.menu__restau--palet {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, #32850b 25%, #94e60f);
   padding-top: 35px;
 }
 
