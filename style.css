@@ -232,6 +232,9 @@ span {
   }
 }
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   height: 120px;
@@ -300,8 +303,14 @@ ul {
   }
 }
 
-.plat--dessert li {
-  margin: 30px 0;
+ul.plat--dessert {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  margin: 15px;
 }
 
 .menu__structure {
@@ -472,17 +481,7 @@ ul {
   }
 }
 
-.price {
-  margin: 15px;
-}
-
-.menu__content__entree, .menu__content--principal {
-  padding-left: 13px;
-  width: 94%;
-}
-
 .menu__content--dessert {
-  width: 72%;
   padding: 13px;
 }
 @media screen and (max-width: 425px) {
