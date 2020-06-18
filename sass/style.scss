@@ -8,7 +8,6 @@ body {
     background: #f7e8e8;
     margin: 0;
     padding: 0;
-    
 }
 
 header, footer, .btn__nextime {
@@ -114,7 +113,7 @@ header h1 {
             margin-top: 45px;
             font-size: 2rem;
             @include mobile {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
         }
 
@@ -211,7 +210,7 @@ header h1 {
 // BTN next_time
 
 .btn__nextime {
-    margin: 25px auto;
+    margin: 100px auto;
     border-radius: 8px;
     font-size: 2rem;
     padding: 10px 45px;
@@ -224,6 +223,7 @@ header h1 {
         width: 90%;
         font-size: 1.5rem;
         padding: 3px;
+        margin: 50px auto 150px;
     }
 }
 
@@ -275,10 +275,9 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 120px;
+    height: 80px;
     font-size: 1.8rem;
     font-weight: 300;
-    line-height: 5rem;
     font-weight: bold;
     @include mobile {
         flex-direction: column;
@@ -338,25 +337,39 @@ ul {
     display: flex;
     justify-content: space-between;
     width: 90%;
+    padding: 0 15px 0 15px;
     @include mobile {
-        // margin: auto;
         flex-direction: column;
         padding: 5px;
+        margin-top: 15px;
     }
+    @include tablet {
+        padding: 25px 0;
+    }
+
+
+}
+ul {
+    padding-inline-start: 0;
+}
+.plat--dessert li {
+    margin: 15px 0;
 }
 
-// ul.plat--dessert {
-//     @include mobile {
-//         display: flex;
-//         flex-direction: column;
-//         width: 100%;
-//     }
-//     @include tablet {
-//         display: flex;
-//         flex-direction: column;
-//         width: ;
-//     }
-// }
+ul.plat--dessert {
+    display: flex;
+    justify-content: space-between;
+    max-width: 950px;
+    width: 90%;
+    @include mobile {
+        max-width: none;
+        flex-direction: column;
+        margin: auto;
+    }
+    @include tablet {
+        max-width: none;
+    }
+}
 
 ul.plat__dessert {
     width: 100%;
@@ -427,31 +440,31 @@ ul.plat__dessert {
     display: flex;
     margin-bottom: 15px;
     font-weight: bold;
+    text-align: center;
     @include mobile {
-        flex-direction: column;
+        // flex-direction: column;
         margin: 0;
-        text-align: center;
     }
     @include tablet {
-        flex-direction: column;
+        // flex-direction: column;
         margin: auto;
         margin-bottom: 25px;
     }
 
     & img {
         height: 10px;
-        width: 27%; // A revoir
+        width: 27%;
         margin: 40px;
         margin-right: 50px;
         @include mobile {
             margin: auto;
             height: 10px;
-            width: 80%;            
+            width: 15%;            
         }
         @include tablet {
             margin: auto;
             height: 10px;
-            width: 80%;
+            // width: 80%;
         }
     }
     
@@ -519,13 +532,10 @@ ul.plat__dessert {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 3px 0 70px;
-    // width: 70%;
     max-width: 950px;
     font-size: 1.8rem;
-    // background-color: #05c5ff;
     @include mobile {
         display: block;
-        // flex-direction: column;
         margin: 0;
         text-align: center;
         margin-bottom: 15px;
@@ -534,7 +544,6 @@ ul.plat__dessert {
     @include tablet {
         display: block;
         margin: 0;
-        text-align: center;
         margin-bottom: 15px;
     }
 }
@@ -546,16 +555,19 @@ ul.plat__dessert {
 
 .menu__content--dessert {
     // width: 72%;
+    
     padding: 13px;
     @include mobile {
-        width: 85%;
+        // width: 85%;
         padding-left: 0;
     }
     @include tablet {
-        width: 85%;
+        // width: 85%;
         padding-left: 0;
     }
 }
+
+
 
 .nom__restau--bottom {
     display: flex;

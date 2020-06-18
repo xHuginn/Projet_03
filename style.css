@@ -119,7 +119,7 @@ header h1 {
 }
 @media screen and (max-width: 425px) {
   .menu .menu-prev__title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 .menu .menu-prev--enchantee, .menu .menu-prev__menu--enchantee a, .menu .menu-prev__title--enchantee a {
@@ -182,7 +182,7 @@ header h1 {
 }
 
 .btn__nextime {
-  margin: 25px auto;
+  margin: 100px auto;
   border-radius: 8px;
   font-size: 2rem;
   padding: 10px 45px;
@@ -197,6 +197,7 @@ header h1 {
     width: 90%;
     font-size: 1.5rem;
     padding: 3px;
+    margin: 50px auto 150px;
   }
 }
 
@@ -237,10 +238,9 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 120px;
+  height: 80px;
   font-size: 1.8rem;
   font-weight: 300;
-  line-height: 5rem;
   font-weight: bold;
 }
 @media screen and (max-width: 425px) {
@@ -295,11 +295,45 @@ ul {
   display: flex;
   justify-content: space-between;
   width: 90%;
+  padding: 0 15px 0 15px;
 }
 @media screen and (max-width: 425px) {
   .plat {
     flex-direction: column;
     padding: 5px;
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  .plat {
+    padding: 25px 0;
+  }
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.plat--dessert li {
+  margin: 15px 0;
+}
+
+ul.plat--dessert {
+  display: flex;
+  justify-content: space-between;
+  max-width: 950px;
+  width: 90%;
+}
+@media screen and (max-width: 425px) {
+  ul.plat--dessert {
+    max-width: none;
+    flex-direction: column;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  ul.plat--dessert {
+    max-width: none;
   }
 }
 
@@ -369,17 +403,15 @@ ul.plat__dessert {
   display: flex;
   margin-bottom: 15px;
   font-weight: bold;
+  text-align: center;
 }
 @media screen and (max-width: 425px) {
   .title__prev {
-    flex-direction: column;
     margin: 0;
-    text-align: center;
   }
 }
 @media screen and (min-width: 426px) and (max-width: 1023px) {
   .title__prev {
-    flex-direction: column;
     margin: auto;
     margin-bottom: 25px;
   }
@@ -394,14 +426,13 @@ ul.plat__dessert {
   .title__prev img {
     margin: auto;
     height: 10px;
-    width: 80%;
+    width: 15%;
   }
 }
 @media screen and (min-width: 426px) and (max-width: 1023px) {
   .title__prev img {
     margin: auto;
     height: 10px;
-    width: 80%;
   }
 }
 .title__prev--enchantee, .title__prev--french-entree, .title__prev--french-principal, .title__prev--french-dessert, .title__prev--delice, .title__prev--palet {
@@ -474,7 +505,6 @@ ul.plat__dessert {
   .menu__content {
     display: block;
     margin: 0;
-    text-align: center;
     margin-bottom: 15px;
   }
 }
@@ -484,13 +514,11 @@ ul.plat__dessert {
 }
 @media screen and (max-width: 425px) {
   .menu__content--dessert {
-    width: 85%;
     padding-left: 0;
   }
 }
 @media screen and (min-width: 426px) and (max-width: 1023px) {
   .menu__content--dessert {
-    width: 85%;
     padding-left: 0;
   }
 }
