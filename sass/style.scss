@@ -27,6 +27,10 @@ h3 {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 // Header
 
 header h1 {
@@ -35,6 +39,7 @@ header h1 {
     height: 100px;
     padding-top: 25px;
     margin-top: 0;
+    letter-spacing: -4px;
 }
 
 // Menu
@@ -203,7 +208,12 @@ header h1 {
     }
 }
 
-
+.menu-prev--enchantee img {
+    @include mobile {
+        height: 50px;
+    }
+    
+}
 
 
 
@@ -223,7 +233,7 @@ header h1 {
         width: 90%;
         font-size: 1.5rem;
         padding: 3px;
-        margin: 50px auto 150px;
+        margin: 30px auto 90px;
     }
 }
 
@@ -275,16 +285,13 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 90px;
     font-size: 1.8rem;
-    font-weight: 300;
-    font-weight: bold;
     @include mobile {
         flex-direction: column;
-        height: 140px;
+        height: 80px;
         justify-content: start;
         line-height: 2rem;
-        font-weight: bold;
     }
     @include tablet {
         line-height: 3rem;
@@ -296,7 +303,7 @@ footer h4 {
     margin: 20px 55px;
     @include mobile {
         font-size: 1.5rem;
-        margin: 15px;
+        margin: 5px;
         text-align: center;
     }
     @include tablet {
@@ -330,6 +337,8 @@ footer h4 {
 
 ul {
     list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 
@@ -342,6 +351,7 @@ ul {
         flex-direction: column;
         padding: 5px;
         margin-top: 15px;
+        width: 100%;
     }
     @include tablet {
         padding: 25px 0;
@@ -353,7 +363,7 @@ ul {
     padding-inline-start: 0;
 }
 .plat--dessert li {
-    margin: 15px 0;
+    margin: 25px 0;
 }
 
 ul.plat--dessert {
@@ -371,6 +381,10 @@ ul.plat--dessert {
     }
 }
 
+ul.plat--no_price {
+    display: block;
+}
+
 ul.plat__dessert {
     width: 100%;
 }
@@ -385,6 +399,7 @@ ul.plat__dessert {
     width: 90%;
     max-width: 1000px;
     margin: auto;
+    margin-bottom: 100px;
 
     @include mobile {
         width: 100%;
@@ -759,5 +774,31 @@ ul.plat__dessert {
 // #84ce61
 // #beff7f
 // Text 
+
+
+.menu__lien {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include mobile {
+        margin: 25px 0;
+        width: 100%;
+        height: 250px;
+    }
+    @include tablet {
+        margin: 25px 0;
+        width: 90%;
+        height: 350px;
+    }
+    @include desktop {
+        margin: 2%;
+    }
+    @include desktop_4k {
+        margin: 4.1%;
+    }
+}
+
+
 
 
