@@ -369,7 +369,7 @@ ul.plat__dessert {
 }
 @media screen and (max-width: 425px) {
   .menu__structure {
-    width: 100%;
+    width: 90%;
   }
 }
 @media screen and (min-width: 426px) and (max-width: 1023px) {
