@@ -326,37 +326,6 @@ ul {
   }
 }
 
-.plat--dessert li {
-  margin: 25px 0;
-}
-
-ul.plat--dessert {
-  display: flex;
-  justify-content: space-between;
-  max-width: 950px;
-  width: 90%;
-}
-@media screen and (max-width: 425px) {
-  ul.plat--dessert {
-    max-width: none;
-    flex-direction: column;
-    margin: auto;
-  }
-}
-@media screen and (min-width: 426px) and (max-width: 1023px) {
-  ul.plat--dessert {
-    max-width: none;
-  }
-}
-
-ul.plat--no_price {
-  display: block;
-}
-
-ul.plat__dessert {
-  width: 100%;
-}
-
 .price {
   margin: 15px;
 }
@@ -526,18 +495,39 @@ ul.plat__dessert {
   }
 }
 
-.menu__content--dessert {
+.plat__dessert--with_price {
+  max-width: 950px;
+  width: 90%;
+}
+
+.plat__dessert--with_price ul {
+  display: flex;
+  justify-content: space-between;
   padding: 13px;
 }
 @media screen and (max-width: 425px) {
-  .menu__content--dessert {
+  .plat__dessert--with_price ul {
+    max-width: none;
+    flex-direction: column;
+    margin: auto;
     padding-left: 0;
   }
 }
 @media screen and (min-width: 426px) and (max-width: 1023px) {
-  .menu__content--dessert {
+  .plat__dessert--with_price ul {
+    max-width: none;
     padding-left: 0;
   }
+}
+
+.plat__dessert--no_price li {
+  padding: 13px;
+}
+
+.menu__enchantee {
+  background-color: #fcdfda;
+  color: #791717;
+  font-family: "Shadows Into Light", cursive;
 }
 
 .nom__restau--bottom {
@@ -552,7 +542,6 @@ ul.plat__dessert {
     padding-bottom: 15px;
   }
 }
-
 .nom__restau--bottom img {
   width: 45px;
   height: 45px;
@@ -564,17 +553,10 @@ ul.plat__dessert {
     margin: 0;
   }
 }
-
 .nom__restau--bottom h2 {
   font-size: 2.8rem;
   margin: 0;
   padding: 3px;
-}
-
-.menu__enchantee {
-  background-color: #fcdfda;
-  color: #791717;
-  font-family: "Shadows Into Light", cursive;
 }
 
 .menu__french {

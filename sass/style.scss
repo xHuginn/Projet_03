@@ -40,7 +40,7 @@ header h1 {
 }
 
 
-// Menu
+// Menus
 
 
 .principale {
@@ -367,40 +367,11 @@ ul {
 
 }
 
-.plat--dessert li {
-    margin: 25px 0;
-}
-
-ul.plat--dessert {
-    display: flex;
-    justify-content: space-between;
-    max-width: 950px;
-    width: 90%;
-    @include mobile {
-        max-width: none;
-        flex-direction: column;
-        margin: auto;
-    }
-    @include tablet {
-        max-width: none;
-    }
-}
-
-ul.plat--no_price {
-    display: block;
-}
-
-ul.plat__dessert {
-    width: 100%;
-}
-
 .price {
-    // text-align: right;
     margin: 15px;
 }
 
 .menu__structure {
-    // width: 70%;
     width: 90%;
     max-width: 1000px;
     margin: auto;
@@ -419,11 +390,6 @@ ul.plat__dessert {
         width: 60%;
     }
 }
-
-
-
-
-
 
 // Title Top
 
@@ -462,11 +428,9 @@ ul.plat__dessert {
     font-weight: bold;
     text-align: center;
     @include mobile {
-        // flex-direction: column;
         margin: 0;
     }
     @include tablet {
-        // flex-direction: column;
         margin: auto;
         margin-bottom: 25px;
     }
@@ -568,26 +532,37 @@ ul.plat__dessert {
     }
 }
 
-// .menu__content__entree, .menu__content--principal {
-//     width: 94%;
-// }
+.plat__dessert--with_price {
+    max-width: 950px;
+    width: 90%;
+}
 
-
-.menu__content--dessert {
-    // width: 72%;
-    
+.plat__dessert--with_price ul {
+    display: flex;
+    justify-content: space-between;
     padding: 13px;
     @include mobile {
-        // width: 85%;
+        max-width: none;
+        flex-direction: column;
+        margin: auto;
         padding-left: 0;
     }
     @include tablet {
-        // width: 85%;
+        max-width: none;
         padding-left: 0;
     }
 }
 
+.plat__dessert--no_price li {
+    padding: 13px;
+}
 
+// Menu Enchantee
+
+.menu__enchantee {
+    background-color: #fcdfda;
+    @include menu_enchantee;
+}
 
 .nom__restau--bottom {
     display: flex;
@@ -598,113 +573,26 @@ ul.plat__dessert {
         text-align: center;
         padding-bottom: 15px;
     }
-}
 
-.nom__restau--bottom img {
-    width: 45px;
-    height: 45px;
-    margin-top: 15px;
-    margin-right: 20px;
-    @include mobile {
-        margin: 0;
+    & img {
+        width: 45px;
+        height: 45px;
+        margin-top: 15px;
+        margin-right: 20px;
+        @include mobile {
+            margin: 0;
+        }
     }
+    
+    & h2 {
+        font-size: 2.8rem;
+        margin: 0;
+        padding: 3px;
+    }
+    
 }
-
-.nom__restau--bottom h2 {
-    font-size: 2.8rem;
-    margin: 0;
-    padding: 3px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Menu Enchantee
-
-.menu__enchantee {
-    background-color: #fcdfda;
-    @include menu_enchantee;
-}
-
 
 // French Menu
-
-// Couleur french
-// Fond 
-// Entrée #c67412
-// Principal #a56799
-// dessert #6e4ccc
-
 
 .menu__french {
     background-color: #fff5fe;
@@ -727,8 +615,6 @@ ul.plat__dessert {
     padding-top: 35px;
 }
 
-
-
 // Menu Delice
 
 .menu__delice {
@@ -738,7 +624,6 @@ ul.plat__dessert {
 }
 
 .title__prev--delice {
-    // color: $text_color-delice;
     padding-top: 8px;
 }
 
@@ -760,10 +645,8 @@ ul.plat__dessert {
 }
 
 .title__prev--palet {
-    // color: $text_color-delice;
     padding-top: 8px;
 }
-
 
 .menu__restau--palet {
         background-clip: text;
@@ -773,7 +656,9 @@ ul.plat__dessert {
         padding-top: 35px;
 }
 
+
 // Mentions Légales
+
 
 h6, p, .mention_legale {
     text-align: center;
