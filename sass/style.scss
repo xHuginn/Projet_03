@@ -58,23 +58,22 @@ header h1 {
     
 }
 
-.menu {
+.menu, .menu__lien, .menu-prev {
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+}
 
+.menu {
+    text-align: center;
+    flex-flow: row wrap;
     @include mobile {
         display: block; 
         width: 100%;   
     }
 
     .menu__lien, .menu-prev {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
 
     .menu__lien {
@@ -111,14 +110,14 @@ header h1 {
             min-height: 350px;
         }
 
-        &__title {
+        & h2 {
             font-size: 2rem;
             @include mobile {
                 font-size: 1.5rem;
             }
         }
         
-        &__menu {
+        & h3 {
             font-size: 2rem;
             margin-top: 5px;
             @include mobile {
@@ -169,7 +168,6 @@ header h1 {
         &--delice {
             background-color: #f9f9f9;
             @include menu_delice;
-
             }
 
         &__title--delice {
@@ -183,9 +181,8 @@ header h1 {
         //      Menu bottom right
 
 
-        &--palet, &__menu--palet a {
+        &--palet {
             background-color: #fdfffd;
-            
             @include menu_palet;
             }
 
@@ -209,7 +206,7 @@ header h1 {
     }
 }
 
-.menu-prev__title, .menu-prev__menu {
+.anim_scale img, .anim_scale h2, .anim_scale h3 {
     transform: scale(1);
     transition: transform 300ms;
     &:hover {
@@ -347,7 +344,7 @@ ul {
     list-style: none;
     margin-block-start: 0;
     margin-block-end: 0;
-    padding-inline-start: 0; // A voir
+    padding-inline-start: 0;
 }
 
 .plat {
@@ -368,7 +365,7 @@ ul {
 }
 
 .price {
-    margin: 15px;
+    margin-bottom: 15px;
 }
 
 .menu__structure {
@@ -376,10 +373,6 @@ ul {
     max-width: 1000px;
     margin: auto;
     margin-bottom: 100px;
-
-    @include mobile {
-        width: 90%;
-    }
     @include tablet {
         padding: 20px;
     }
@@ -623,11 +616,6 @@ ul {
     color: $text_color-delice;
 }
 
-.title__prev--delice {
-    padding-top: 8px;
-}
-
-
 .menu__restau--delice {
         background-clip: text;
         -webkit-background-clip: text;
@@ -636,16 +624,15 @@ ul {
         padding-top: 35px;
 }
 
+.title__prev--delice, .title__prev--palet {
+    padding-top: 8px;
+}
 // Menu Palet
 
 .menu__palet {
     background-color: #fdfffd;
     @include menu_palet;
     color: #343534;
-}
-
-.title__prev--palet {
-    padding-top: 8px;
 }
 
 .menu__restau--palet {
