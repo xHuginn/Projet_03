@@ -138,9 +138,6 @@ header h1 {
     height: 50px;
   }
 }
-.menu .menu-prev__title--enchantee {
-  margin-top: 10px;
-}
 .menu .menu-prev--french {
   background-color: #fef5fd;
   color: #e48435;
@@ -306,30 +303,6 @@ ul {
   padding-inline-start: 0;
 }
 
-.plat {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  padding: 0 15px 0 15px;
-}
-@media screen and (max-width: 425px) {
-  .plat {
-    flex-direction: column;
-    padding: 5px;
-    margin-top: 15px;
-    width: 100%;
-  }
-}
-@media screen and (min-width: 426px) and (max-width: 1023px) {
-  .plat {
-    padding: 25px 0;
-  }
-}
-
-.price {
-  margin-bottom: 15px;
-}
-
 .menu__structure {
   width: 90%;
   max-width: 1000px;
@@ -488,6 +461,30 @@ ul {
     margin: 0;
     margin-bottom: 15px;
   }
+}
+
+.plat {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0 15px 0 15px;
+}
+@media screen and (max-width: 425px) {
+  .plat {
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+  .plat {
+    padding: 25px 0;
+  }
+}
+
+.price {
+  margin-bottom: 15px;
 }
 
 .plat__dessert--with_price {
