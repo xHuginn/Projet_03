@@ -344,9 +344,6 @@ footer {
 
 ul {
     list-style: none;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
 }
 
 .menu__structure {
@@ -501,7 +498,7 @@ ul {
         margin: 0;
         text-align: center;
         margin-bottom: 15px;
-
+        padding: 0;
     }
     @include tablet {
         display: block;
@@ -531,29 +528,14 @@ ul {
     margin-bottom: 15px;
 }
 
-.plat__dessert--with_price {
-    max-width: 950px;
-    width: 90%;
-}
-
-.plat__dessert--with_price ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 13px;
+.plat__dessert--no_price {
     @include mobile {
-        max-width: none;
-        flex-direction: column;
-        margin: auto;
-        padding-left: 0;
+        padding: 0;
     }
-    @include tablet {
-        max-width: none;
-        padding-left: 0;
-    }
-}
 
-.plat__dessert--no_price li {
-    padding: 13px;
+    & li {
+        padding: 13px;
+    }
 }
 
 
