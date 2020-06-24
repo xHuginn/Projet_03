@@ -231,47 +231,44 @@ header h1 {
         padding: 3px;
         margin: 30px auto 90px;
     }
-}
+
+    // BTN anim
 
 
-// BTN anim
-
-
-span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin: 5px;
-    margin-top: 25px;
-    animation: dot 0.8s infinite alternate;
-    background-color: $text_color;
-}
-
-.un {
-    animation-delay: 150ms;
-}
-
-.deux {
-    animation-delay: 450ms;
-}
-
-.trois {
-    animation-delay: 750ms;
-}
-
-@keyframes dot {
-    from {
-        transform: translateY(3px);
-        opacity: 0.2;
+    span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin: 5px;
+        margin-top: 25px;
+        animation: dot 0.8s infinite alternate;
+        background-color: $text_color;
     }
 
-    to {
-        opacity: 1;
+    .un {
+        animation-delay: 150ms;
     }
 
+    .deux {
+        animation-delay: 450ms;
+    }
+
+    .trois {
+        animation-delay: 750ms;
+    }
+
+    @keyframes dot {
+        from {
+            transform: translateY(3px);
+            opacity: 0.2;
+        }
+
+        to {
+            opacity: 1;
+        }
+
+    }
 }
-
-
 // Footer
 
 
@@ -432,6 +429,7 @@ ul {
         margin: auto;
         margin-top: 13px;
         position: relative;
+        cursor: default;
         @include mobile {
             margin: 0;
         }
@@ -442,15 +440,15 @@ ul {
             bottom: 0;
             width: 100%;
             height: 3px;
-            left: 50%;
-            transform: translateX(-50%) scaleX(0);
-            transform-origin: 50% 50%;
+            left: 50%; // centrer le trait
+            transform: translateX(-50%) scaleX(0); //translate = faire glisser le trait scaleX le fait disparaître
+            transform-origin: 50% 50%; //partir du centre 1 = gauche 2 = droite
             transition: transform 250ms;
         }
     
         &:hover {
             &::after {
-                transform: translateX(-50%) scaleX(1);
+                transform: translateX(-50%) scaleX(1);  //translate = faire glisser le trait scaleX le fait disparaître
             }
         }
     }

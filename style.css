@@ -208,8 +208,7 @@ header h1 {
     margin: 30px auto 90px;
   }
 }
-
-span {
+.btn__nextime span {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -218,19 +217,15 @@ span {
   animation: dot 0.8s infinite alternate;
   background-color: #eac450;
 }
-
-.un {
+.btn__nextime .un {
   animation-delay: 150ms;
 }
-
-.deux {
+.btn__nextime .deux {
   animation-delay: 450ms;
 }
-
-.trois {
+.btn__nextime .trois {
   animation-delay: 750ms;
 }
-
 @keyframes dot {
   from {
     transform: translateY(3px);
@@ -240,6 +235,7 @@ span {
     opacity: 1;
   }
 }
+
 footer {
   position: fixed;
   bottom: 0;
@@ -391,6 +387,7 @@ ul {
   margin: auto;
   margin-top: 13px;
   position: relative;
+  cursor: default;
 }
 @media screen and (max-width: 425px) {
   .title__prev--enchantee, .title__prev--french-entree, .title__prev--french-principal, .title__prev--french-dessert, .title__prev--delice, .title__prev--palet {
