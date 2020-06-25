@@ -258,23 +258,24 @@ footer {
     line-height: 3rem;
   }
 }
-footer h4 {
+footer h5 {
   margin: 20px 55px;
+  font-size: 1.8rem;
 }
 @media screen and (max-width: 425px) {
-  footer h4 {
+  footer h5 {
     font-size: 1.5rem;
     margin: 5px;
     text-align: center;
   }
 }
 @media screen and (min-width: 426px) and (max-width: 1023px) {
-  footer h4 {
+  footer h5 {
     margin: 10px 25px;
     font-size: 1.5rem;
   }
 }
-footer h4:hover {
+footer h5:hover {
   animation: wizz 0.2s infinite alternate;
 }
 
@@ -294,6 +295,8 @@ footer h4:hover {
 
 ul {
   list-style: none;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .menu__structure {
@@ -433,18 +436,16 @@ ul {
   background-color: #32850b;
 }
 
+h4 {
+  margin: 0;
+}
+
 .menu__content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 3px 0 70px;
-  max-width: 950px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: normal;
 }
 @media screen and (max-width: 425px) {
   .menu__content {
-    display: block;
-    margin: 0;
     text-align: center;
     margin-bottom: 15px;
     padding: 0;
@@ -452,43 +453,29 @@ ul {
 }
 @media screen and (min-width: 426px) and (max-width: 1023px) {
   .menu__content {
-    display: block;
     margin: 0;
     margin-bottom: 15px;
   }
 }
-
-.plat {
+.menu__content li {
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  padding: 0 15px 0 15px;
+  align-items: center;
+  padding-bottom: 20px;
 }
 @media screen and (max-width: 425px) {
-  .plat {
+  .menu__content li {
     flex-direction: column;
-    padding: 5px;
-    margin-top: 15px;
-    width: 100%;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 1023px) {
-  .plat {
-    padding: 25px 0;
-  }
+.menu__content h4 {
+  font-weight: normal;
+  width: 80%;
 }
 
 .price {
-  margin-bottom: 15px;
-}
-
-@media screen and (max-width: 425px) {
-  .plat__dessert--no_price {
-    padding: 0;
-  }
-}
-.plat__dessert--no_price li {
-  padding: 13px;
+  text-align: right;
+  width: 10%;
 }
 
 .menu__enchantee {

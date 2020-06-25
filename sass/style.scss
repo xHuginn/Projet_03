@@ -290,8 +290,9 @@ footer {
         line-height: 3rem;
     }
 
-    & h4 {
+    & h5 {
         margin: 20px 55px;
+        font-size: 1.8rem;
         @include mobile {
             font-size: 1.5rem;
             margin: 5px;
@@ -307,7 +308,7 @@ footer {
     // Footer anim
 
 
-    & h4:hover {
+    & h5:hover {
         animation: wizz 0.2s infinite alternate;
     }
 }
@@ -341,6 +342,8 @@ footer {
 
 ul {
     list-style: none;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .menu__structure {
@@ -418,7 +421,6 @@ ul {
         @include tablet {
             margin: auto;
             height: 10px;
-            // width: 80%;
         }
     }
     
@@ -483,59 +485,43 @@ ul {
 
 // Section Menu
 
+h4 {
+    margin: 0;
+}
 
 .menu__content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 3px 0 70px;
-    max-width: 950px;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: normal;
     @include mobile {
-        display: block;
-        margin: 0;
         text-align: center;
         margin-bottom: 15px;
         padding: 0;
     }
     @include tablet {
-        display: block;
         margin: 0;
         margin-bottom: 15px;
     }
-}
 
-.plat {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    padding: 0 15px 0 15px;
-    @include mobile {
-        flex-direction: column;
-        padding: 5px;
-        margin-top: 15px;
-        width: 100%;
-    }
-    @include tablet {
-        padding: 25px 0;
+    & li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
+    & h4 {
+        font-weight: normal;
+        width: 80%;
+    }
 }
 
 .price {
-    margin-bottom: 15px;
+    text-align: right;
+    width: 10%;
 }
-
-.plat__dessert--no_price {
-    @include mobile {
-        padding: 0;
-    }
-
-    & li {
-        padding: 13px;
-    }
-}
-
 
 // Menu Enchantee
 
